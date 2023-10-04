@@ -108,13 +108,11 @@ def AESCryptor(hBytes, key):
 Decrypts the provided bytes using AES decryption.
 ```python
 def AESDecryptor(hBytes, key):
-    # Проверяем метаданные
+    """Decrypts the provided bytes using AES decryption."""
     metadata = hBytes[:len(b"AES_ENCRYPTED_FILE")]
     if metadata == b"AES_ENCRYPTED_FILE":
-        # Убираем метаданные
         hBytes = hBytes[len(b"AES_ENCRYPTED_FILE"):]
 
-        # Продолжаем дешифрование
         iv = hBytes[:AES.block_size]
         cipher_text = hBytes[AES.block_size:]
         cipher = AES.new(key.encode('utf-8'), AES.MODE_CBC, iv)
