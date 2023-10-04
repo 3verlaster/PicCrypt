@@ -149,7 +149,7 @@ def AESCryptor(hBytes, key):
     return iv + cipher_text
 
 def AESDecryptor(hBytes, key):
-	"""Decrypts the provided bytes using AES decryption."""
+    """Decrypts the provided bytes using AES decryption."""
     metadata = hBytes[:len(b"AES_ENCRYPTED_FILE")]
     if metadata == b"AES_ENCRYPTED_FILE":
         hBytes = hBytes[len(b"AES_ENCRYPTED_FILE"):]
@@ -169,6 +169,7 @@ def AESDecryptor(hBytes, key):
     else:
         print("[!] This file is not encrypted using AES.")
         exit(1)
+
 
 enc_dec = int(input("[1 - Encrypt | 2 - Decrypt]: "))
 if enc_dec == 1: #ENCRYPT!
