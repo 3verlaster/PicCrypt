@@ -2,6 +2,8 @@
 
 This script provides functionalities for encrypting and decrypting images using AES and Base64 encryption.
 
+![PicCrypt](dev/PicCrypt.png)
+
 ## Usage
 This script provides encryption and decryption options for image files. You can encrypt images using AES or Base64 encryption, and decrypt them accordingly.
 
